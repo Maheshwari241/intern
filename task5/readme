@@ -1,1 +1,58 @@
+💡 Interview Questions & Answers
+1. Difference between INNER and LEFT JOIN?
 
+INNER JOIN: Only matched rows.
+
+LEFT JOIN: All rows from left + matched from right (NULL if no match).
+
+2. What is a FULL OUTER JOIN?
+
+Returns all rows from both tables with NULL where there’s no match.
+
+3. Can joins be nested?
+
+Yes, you can nest joins using parentheses or CTEs:
+
+SELECT *
+FROM (TableA JOIN TableB ON ...) JOIN TableC ON ...
+4. How to join more than 2 tables?
+
+Just chain joins:
+
+SELECT *
+FROM A
+JOIN B ON A.id = B.a_id
+JOIN C ON B.id = C.b_id;
+5. What is a CROSS JOIN?
+
+Every row in Table A joins with every row in Table B (Cartesian product).
+
+6. What is a NATURAL JOIN?
+
+Joins automatically using columns with the same name. Avoided in practice for clarity.
+
+7. Can you join tables without foreign key?
+
+Yes. Joins can be done on any matching column:
+
+SELECT * FROM A JOIN B ON A.email = B.email;
+8. What is a SELF-JOIN?
+
+A table joins with itself:
+
+SELECT A.Name, B.Name
+FROM Employees A, Employees B
+WHERE A.ManagerID = B.EmployeeID;
+9. What causes Cartesian product?
+
+Missing or incorrect JOIN condition.
+
+10. How to optimize joins?
+
+Use indexed columns for joins
+
+Avoid joining large tables unnecessarily
+
+Use only required columns (SELECT col1, col2)
+
+Filter early using WHERE
