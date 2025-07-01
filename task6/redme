@@ -1,1 +1,36 @@
+ Interview Questions with Short Answers:
+1. What is a subquery?
+A query nested inside another query.
 
+2. Difference between subquery and join?
+
+Subquery: Executes separately and passes results to the outer query.
+
+Join: Combines rows from multiple tables into one result set directly.
+
+3. What is a correlated subquery?
+A subquery that refers to a column from the outer query.
+
+4. Can subqueries return multiple rows?
+Yes, if used with IN, EXISTS, or in the FROM clause.
+
+5. How does EXISTS work?
+Returns TRUE if the subquery returns any rows.
+
+6. How is performance affected by subqueries?
+
+Scalar or uncorrelated subqueries are generally fine.
+
+Correlated subqueries can be slow if not optimized.
+
+7. What is a scalar subquery?
+A subquery that returns exactly one row and one column.
+
+8. Where can we use subqueries?
+In SELECT, FROM, WHERE, and HAVING clauses.
+
+9. Can a subquery be in FROM clause?
+Yes. This is called a derived table.
+
+10. What is a derived table?
+A subquery used in the FROM clause, treated like a temporary table.
