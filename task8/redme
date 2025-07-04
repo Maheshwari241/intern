@@ -1,1 +1,50 @@
+ Interview Questions and Answers:
+1. What is the difference between a procedure and a function?
 
+Procedure: Doesn't return a value directly, used for performing actions.
+
+Function: Returns a value and is often used within SQL queries.
+
+2. What is an IN/OUT parameter?
+
+IN: Passes a value into the procedure.
+
+OUT: Passes a value out from the procedure.
+
+INOUT: Can be used both for input and output.
+
+3. Can functions return tables?
+
+In MySQL: No, they return scalar values.
+
+In SQL Server: Yes, table-valued functions exist.
+
+4. What is RETURN used for?
+
+To return a value from a function.
+
+5. How to call stored procedures?
+
+Using the CALL keyword. Example: CALL ProcedureName(params);
+
+6. What is the benefit of stored routines?
+
+Reusability, security (access control), performance (precompiled), modularity.
+
+7. Can procedures have loops?
+
+Yes, using WHILE, LOOP, REPEAT, and FOR (in some databases).
+
+8. Difference between scalar and table-valued functions?
+
+Scalar: Returns a single value.
+
+Table-valued: Returns a set of rows (like a table).
+
+9. What is a trigger?
+
+A stored block that executes automatically in response to certain events on a table (INSERT, UPDATE, DELETE).
+
+10. How to debug stored procedures?
+
+Use SELECT statements to trace, or use debugging tools available in MySQL Workbench or external IDEs.
